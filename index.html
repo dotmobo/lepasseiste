@@ -31,6 +31,14 @@
         <div class="main-grid">
             <section id="about">
                 <div class="carousel" role="region" aria-label="Galerie d'images de la boutique">
+                    <button class="carousel-control-prev" type="button" aria-label="Diapositive précédente">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Précédent</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" aria-label="Diapositive suivante">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Suivant</span>
+                    </button>
                     <div class="carousel-inner" aria-live="polite">
                         <div class="carousel-item active">
                             <img loading="lazy" src="static/img/carousel/565014087_17856636600542554_2707075411790146200_n.jpeg"
@@ -64,6 +72,8 @@
                             <img loading="lazy" src="static/img/carousel/569851076_17856636654542554_8241218116052146438_n.jpeg"
                                 alt="Photo de la boutique 8">
                         </div>
+                    </div>
+                    <div class="carousel-indicators" role="tablist" aria-label="Sélectionner la diapositive">
                     </div>
                 </div>
             </section>
@@ -99,20 +109,7 @@
     <footer>
         <p>&copy; 2025 Le Passéiste</p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const carouselItems = document.querySelectorAll('.carousel-item');
-            let currentIndex = 0;
-
-            function showNextItem() {
-                carouselItems[currentIndex].classList.remove('active');
-                currentIndex = (currentIndex + 1) % carouselItems.length;
-                carouselItems[currentIndex].classList.add('active');
-            }
-
-            setInterval(showNextItem, 3000);
-        });
-    </script>
+    <script src="static/js/carousel.js"></script>
 </body>
 
 </html>
