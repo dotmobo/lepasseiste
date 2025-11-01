@@ -1,0 +1,164 @@
+body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #e3cd9b;
+    color: #000000;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+header {
+    background: #032816;
+    color: #e3cd9b;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.header-text {
+    margin-left: 20px;
+}
+
+.catchy-text {
+    background: #5b431f;
+    color: #e3cd9b;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+section {
+    background: #e3cd9b;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#horaires img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #horaires img {
+        max-width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .header-text {
+        margin-left: 0;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #032816;
+    color: #e3cd9b;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.contact-card {
+    background: #5b431f;
+    color: #e3cd9b;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-card:hover {
+    background: #032816;
+    color: #e3cd9b;
+    transform: translateY(-10px);
+}
+
+.contact-card:hover a {
+    color: #e3cd9b;
+}
+
+.contact-card h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-card a {
+    color: #e3cd9b;
+    text-decoration: none;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
